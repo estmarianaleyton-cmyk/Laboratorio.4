@@ -22,21 +22,21 @@ En esta práctica se diseñó y construyó un modelo a escala que regula la temp
 
 Para identificar las partes se tomó como referencia el manual de uso de la incubadora comercial Dräger Isolette 8000 plus [10]. Según el fabricante, este equipo proporciona un ambiente controlado para bebés prematuros y a término de hasta 10 kg, y regula la temperatura y, de forma opcional, el oxígeno y la humedad [10, Sec. 3.1].
 
-| Parte | Función | Sección del manual|
-| --- | --- | --- |
-| Cúpula transparente | 6.6 | 6.6 |
-| Paredes dobles internas | 42.5 | 6.6 |
-| Paneles de acceso | 32.8 | 6.6 |
-| Portillos (ovalados o tipo iris) | 6.6 | 6.6 |
-| Cama y colchon | 42.5 | 6.6 |
-| Sistema de calefacción y circulación de aire| 32.8 | 6.6 |
-| Módulo de sensores | 6.6 | 6.6 |
-| Sondas de temperatura de piel | 42.5 | 6.6 |
-| Modos de control de temperatura | 32.8 | 6.6 |
-| Sistema de humidificacion | 6.6 | 6.6 |
-| Sistema de oxigeno | 42.5 | 6.6 |
-| Filtro de entrada de aire | 32.8 | 6.6 |
-| Bascula (opcional) | 6.6 | 6.6 |
-| Controlador con pantalla | 42.5 | 6.6 |
-| Alarmas | 32.8 | 6.6 |
-| Carro con ajuste de altura | 6.6 | 6.6 |
+| Parte | Función | Sección del manual | 
+| --- | --- |  ---  |
+| Cúpula transparente |Encierra el compartimiento del paciente y permite observarlo. No debe levantarse con el bebé adentro; el acceso se hace por los paneles y portillos. | 2.2.11, 4.1  |
+| Paredes dobles internas |Forman una doble pared en la capota que ayuda a reducir las pérdidas de calor. | 7.2.2 |
+| Paneles de acceso |Permiten sacar la cama y atender al bebé. Al abrirlos se activa una "cortina" de aire caliente que limita la pérdida de calor. | 2.9.1, 2.9.3 |
+| Portillos (ovalados o tipo iris) |Permiten introducir las manos sin abrir los paneles completos. | 4.3, 7.2.2 |
+| Cama y colchon |Soporte del neonato; se desliza hacia afuera y se inclina (posición de Trendelenburg) con perillas.| 4.1, 7.2.2 |
+| Sistema de calefacción y circulación de aire|Un calefactor y un impulsor (ventilador) calientan el aire y lo introducen al compartimiento por ranuras de ventilación. El controlador registra el porcentaje de potencia del calefactor.| 2.9.2, 5.2, 6.5 |
+| Módulo de sensores |Aloja los sensores de temperatura del aire, humedad y oxígeno, y los conectores de las sondas de piel y de la báscula. | 4.5 |
+| Sondas de temperatura de piel |La sonda central (amarilla, en el abdomen) controla la temperatura en modo piel; la periférica (blanca, en mano o pie) solo monitorea. | 8.1.3–8.1.5 |
+| Modos de control de temperatura |Modo aire (regula la temperatura del aire) y modo piel (regula la temperatura de la piel del bebé). | 2.2.6, 8.1 |
+| Sistema de humidificacion |Reservorio con agua destilada y un evaporador; permite fijar la humedad relativa entre 30 % y 95 %. | 6.5, 8.2 |
+| Sistema de oxigeno |Entrada de oxígeno en la parte trasera; en modo servo controla la concentración entre 21 % y 65 % usando dos sensores redundantes. | 4.2, 6.6, 8.3 |
+| Filtro de entrada de aire |Filtra el aire que entra al equipo; si se ensucia puede alterar la concentración de oxígeno y acumular CO₂. Debe cambiarse al menos cada 3 meses. | 4.2, 7.2.2 |
+| Bascula (opcional) |Se instala bajo el colchón y pesa al bebé sin sacarlo; tiene funciones de cero y tara y se verifica con un peso conocido. | 6.4, 7.2.8, 8.6 |
+| Controlador con pantalla |Muestra temperatura, humedad, oxígeno y tendencias, y permite ajustar los valores deseados. | 5.1, 5.2 |
+| Alarmas |Avisan, entre otros, por falla de energía, baja temperatura del aire o de la piel, sonda de piel desconectada y corte por alta temperatura (el equipo no debe superar 39,9 °C). | 7.2.1, 9 |
+| Carro con ajuste de altura | Soporta la incubadora, permite subirla o bajarla y tiene ruedas con freno. | 4.1, 7.2.3 |
