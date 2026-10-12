@@ -19,3 +19,24 @@ Las incubadoras se desarrollan desde el siglo XIX para mantener la estabilidad t
 En esta práctica se diseñó y construyó un modelo a escala que regula la temperatura interna por convección forzada (ventilador + elemento resistivo) dentro del rango de 36 °C a 37,5 °C, indica el estado térmico mediante un panel de tres LEDs y mide el peso del neonato con una celda de carga.
 
 ## ***Partes principales de una incubadora neonatal***
+
+Para identificar las partes se tomó como referencia el manual de uso de la incubadora comercial Dräger Isolette 8000 plus [10]. Según el fabricante, este equipo proporciona un ambiente controlado para bebés prematuros y a término de hasta 10 kg, y regula la temperatura y, de forma opcional, el oxígeno y la humedad [10, Sec. 3.1].
+
+| Parte | Función | Sección del manual|
+| --- | --- | --- |
+| Cúpula transparente | 6.6 | 6.6 |
+| Paredes dobles internas | 42.5 | 6.6 |
+| Paneles de acceso | 32.8 | 6.6 |
+| Portillos (ovalados o tipo iris) | 6.6 | 6.6 |
+| Cama y colchon | 42.5 | 6.6 |
+| Sistema de calefacción y circulación de aire| 32.8 | 6.6 |
+| Módulo de sensores | 6.6 | 6.6 |
+| Sondas de temperatura de piel | 42.5 | 6.6 |
+| Modos de control de temperatura | 32.8 | 6.6 |
+| Sistema de humidificacion | 6.6 | 6.6 |
+| Sistema de oxigeno | 42.5 | 6.6 |
+| Filtro de entrada de aire | 32.8 | 6.6 |
+| Bascula (opcional) | 6.6 | 6.6 |
+| Controlador con pantalla | 42.5 | 6.6 |
+| Alarmas | 32.8 | 6.6 |
+| Carro con ajuste de altura | 6.6 | 6.6 |
