@@ -77,7 +77,7 @@ Finalmente, se incorporaron los circuitos de control del ventilador y del calent
 <img width="287" height="436" alt="image" src="https://github.com/user-attachments/assets/2fe20bce-76c1-432c-818f-e3aa5aac701c" />
 
 
-## ***4. Temperatura***
+## ***4. Temperatura y ventilación***
 
 La temperatura fue medida utilizando un termistor NTC de 10 kΩ. Esta resistencia eléctrica disminuye su valor cuando la temperatura aumenta. El sensor fue conectado a un divisor de tensión cuya señal fue alimentada a la entrada analógica GPIO 34 del ESP32.
 
@@ -104,6 +104,8 @@ T_C=T_K-273.15
 Como resistencia nominal y constante Beta inicial se utilizó Rt= 10 kΩ y B= 3950 respectivamente. Se debe elegir estos valores de acuerdo al termistor utilizado.
 
 Verificación de medida: Se verificará la medida calculando la temperatura en el ESP32 e informando con un.display() junto a la temperatura mostrada en un termómetro comercial. De esta manera podemos observar si hay desviaciones entre ambas mediciones y así decidir si es necesario recalibrar los valores de medida. Cualquier corrección deberá ser verificada mediante mediciones. 
+
+A su vez esta temperatura será regulada por un sistema de ventilación que se activa en 37°C y se desactiva al llegar a 36°C para asegurar el mantenimiento de la temperatura.
 
 ## ***5. Pesaje***
 
