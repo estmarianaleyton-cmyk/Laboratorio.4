@@ -97,3 +97,23 @@ Los errores se calcularon como:
 # **Discusión**
 
 # **Referencias**
+
+[1] C. G. K. Tran et al., "Designing a low-cost multifunctional infant incubator," J. Lab. Autom., vol. 19, no. 3, pp. 332–337, Jun. 2014. https://doi.org/10.1177/2211068214530391
+
+[2] L. Restrepo-Pérez, N. Durango-Londoño, N. E. Gómez-Suárez, F. González-Ramírez y N. Rivera-Bonilla, "Prototipo de incubadora neonatal," Revista Ingeniería Biomédica, vol. 1, no. 1, pp. 55–59, 2007. http://www.scielo.org.co/pdf/rinbi/v1n1/v1n1a12.pdf
+
+[3] M. van Leeuwen et al., European Standards of Care for Newborn Health: Temperature management in newborn infants, EFCNI, Nov. 2018. https://newborn-health-standards.org/standards/standards-english/care-procedures/temperature-management-in-newborn-infants/
+
+[4] R. B. Knobel-Dail, "Role of effective thermoregulation in premature neonates," Research and Reports in Neonatology, vol. 4, pp. 147–156, 2014. https://doi.org/10.2147/RRN.S52377
+
+[5] R. E. Black et al., "Global, regional, and national causes of child mortality in 2008: a systematic analysis," Lancet, vol. 375, pp. 1969–1987, Jun. 2010. https://doi.org/10.1016/S0140-6736(10)60549-1
+
+[6] R. Antonucci, A. Porcella y V. Fanos, "The infant incubator in the neonatal intensive care unit: unresolved issues and future developments," J. Perinat. Med., vol. 37, no. 6, pp. 587–598, 2009. https://doi.org/10.1515/JPM.2009.109
+
+[7] World Health Organization, Thermal protection of the newborn: a practical guide, WHO/RHT/MSM/97.2. Ginebra: WHO, 1997. https://www.who.int/publications/i/item/WHO_RHT_MSM_97.2
+
+[8] T. I. Sherman, J. S. Greenspan, N. St. Clair, S. M. Touch et al., "Optimizing the neonatal thermal environment," Neonatal Network, vol. 25, no. 4, pp. 251–260, 2006.
+
+[9] V. Flenady y P. G. Woodgate, "Radiant warmers versus incubators for regulating body temperature in newborn infants," Cochrane Database Syst. Rev., no. 4, art. CD000435, 2003. https://doi.org/10.1002/14651858.CD000435
+
+[10] Drägerwerk AG & Co. KGaA, Instructions for use Isolette 8000 plus, Incubator, Software 5.n, ed. 4, doc. MU25944. Lübeck, Alemania, Jul. 2019. https://www.draeger.com/Content/Documents/Content/isolette-8000-plus-sw-5n-ifu-mu25944-en.pdf
