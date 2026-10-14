@@ -88,7 +88,7 @@ La báscula, formada por una celda de carga y el módulo HX711, se calibró con 
 
 Los errores se calcularon como:
 
-<img width="449" height="168" alt="image" src= http://github.com/estmarianaleyton-cmyk/Laboratorio.4/blob/main/error.png>
+<img width="449" height="168" alt="image" src=https://github.com/estmarianaleyton-cmyk/Laboratorio.4/blob/main/error.png>
 
 - Un error relativo del 12,5 % parece grande, pero corresponde a solo 0,2 g. El porcentaje sale alto porque el objeto patrón es muy liviano: 1,6 g es apenas el 0,03 % de la capacidad de la celda de carga. Con masas tan pequeñas, cualquier variación mínima de la lectura pesa mucho en el porcentaje.
 - Sin carga, la báscula marcó −0,51 g en vez de 0 g. Esa desviación es mayor que el error medido con el objeto, lo que indica que el ruido y las variaciones de la celda después de la tara y ruido eléctrico del HX711 limitan la resolución de la báscula a unas décimas de gramo.
