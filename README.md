@@ -16,7 +16,7 @@ La incubadora neonatal es un dispositivo médico que busca reproducir, en lo pos
 
 Las incubadoras se desarrollan desde el siglo XIX para mantener la estabilidad térmica de recién nacidos de bajo peso o enfermos, lo que mejoró de forma importante su supervivencia. Hoy son equipos de alta tecnología, aunque aún tienen retos pendientes, como reducir las pérdidas de calor del neonato, controlar mejor la humedad y disminuir la exposición al ruido y a la luz [6]. Según la Organización Mundial de la Salud, la temperatura corporal normal de un recién nacido está entre 36,5 °C y 37,5 °C, y la protección térmica busca evitar tanto la hipotermia como la hipertermia [7]. Para lograrlo, se busca mantener al neonato en un ambiente térmico neutro, es decir, aquel en el que mantiene su temperatura con el mínimo gasto de oxígeno y energía [8]. Frente a otros dispositivos de calentamiento, como las cunas de calor radiante (servo-cunas), las incubadoras cerradas reducen la pérdida insensible de agua del neonato [9].
 
-En esta práctica se diseñó y construyó un modelo a escala que regula la temperatura interna por convección forzada (ventilador + elemento resistivo) dentro del rango de 36 °C a 37,5 °C, indica el estado térmico mediante un panel de tres LEDs y mide el peso del neonato con una celda de carga.
+En esta práctica se diseñó y construyó un modelo a escala que regula la temperatura interna por medio de un bombillo con relé y un ventilador dentro del rango de 36 °C a 37,5 °C, ademas de midir el peso del neonato con una celda de carga.
 
 ## ***Partes principales de una incubadora neonatal***
 
@@ -40,3 +40,59 @@ Para identificar las partes se tomó como referencia el manual de uso de la incu
 | Controlador con pantalla |Muestra temperatura, humedad, oxígeno y tendencias, y permite ajustar los valores deseados. | 5.1, 5.2 |
 | Alarmas |Avisan, entre otros, por falla de energía, baja temperatura del aire o de la piel, sonda de piel desconectada y corte por alta temperatura (el equipo no debe superar 39,9 °C). | 7.2.1, 9 |
 | Carro con ajuste de altura | Soporta la incubadora, permite subirla o bajarla y tiene ruedas con freno. | 4.1, 7.2.3 |
+
+# **Metodología**
+
+# **Resultados**
+
+## ***Medición de temperatura***
+
+| Estado | Temperatura medida | Bombillo | Ventilador | 
+| --- | --- |  ---  |  ---  |
+| Inicio (Ambiente) | 25,63 °C  | Solicitado  | Apagado  |
+| Limite superior alcanzado | 37,08 °C  | No solicitado  | Encendido  |
+
+## ***Medición de peso***
+
+| Prueba | Medida obtenida | 
+| --- | --- |
+| Inicial | 0 g  | 
+| Objeto conocido | 1,400 g  |
+
+# **Análisis de resultados**
+
+## ***Estrategia de control implementada para la medición de la temperatura***
+
+El control de temperatura se implementó en el ESP32 como un control ON-OFF con histéresis de dos actuadores, a partir de la lectura del termistor NTC:
+
+| Condición | Bombillo con relé | Ventilador | Propósito | 
+| --- | --- |  ---  |  ---  |
+| T ≤ 36,0 °C | Encendido  | Apagado  | Calentar la cámara  |
+| 36,0 °C < T < 37,0 °C | Mantiene su estado anterior  | Mantiene su estado anterior  | Zona de histéresis  |
+| T ≥ 37,0 °C | Encendido  | Apagado  | Calentar la cámara  |
+
+La banda de histéresis de 1 °C (36,0–37,0 °C) evita que los actuadores conmuten continuamente cuando la temperatura está cerca de un umbral. El límite superior se fijó en 37,0 °C, por debajo del máximo de 37,5 °C que pide la guía, para dejar un margen frente al sobreimpulso.
+
+- Con la cámara a temperatura ambiente de 25,63 °C, muy por debajo de 36 °C, el sistema solicitó calentamiento y mantuvo el ventilador apagado, que es la respuesta esperada. Esto confirma que la lectura del termistor y la lógica de decisión funcionan.
+- El sistema logró llevar la cámara desde 25,63 °C hasta 37,08 °C, es decir, subió más de 11 °C. Esto muestra que el bombillo usado como fuente de calor de 10W, fue suficiente para alcanzar el rango clínico en la cámara del prototipo.
+- Al superar 37,0 °C el bombillo se apagó y el ventilador se encendió, como estaba programado. La temperatura registrada en ese momento (37,08 °C) supera el umbral programado en solo 0,08 °C y se mantiene dentro del rango de 36,0 a 37,5 °C que exige la guía. Ese pequeño exceso se explica por la inercia térmica: cuando el relé apaga el bombillo, su vidrio y el aire cercano siguen calientes y entregan calor a la cámara por un tiempo.
+
+## ***Estrategia de control implementada para la medición del peso***
+
+La báscula, formada por una celda de carga y el módulo HX711, se calibró con un factor de 0,5347 y se puso en cero (tara) al iniciar el sistema.
+
+| Prueba | Masa patrón | Lectura | Error absoluto | Error relativo | 
+| --- | --- | --- | --- | --- |
+| Inicial | 0 g  | -0,51 g  | 0,51 g  |  --  |
+| Objeto conocido | 1,600 g  | 1,400 g  | 0,2 g  | 12,5 %  | 
+
+Los errores se calcularon como:
+
+
+- Un error relativo del 12,5 % parece grande, pero corresponde a solo 0,2 g. El porcentaje sale alto porque el objeto patrón es muy liviano: 1,6 g es apenas el 0,03 % de la capacidad de la celda de carga. Con masas tan pequeñas, cualquier variación mínima de la lectura pesa mucho en el porcentaje.
+- Sin carga, la báscula marcó −0,51 g en vez de 0 g. Esa desviación es mayor que el error medido con el objeto, lo que indica que el ruido y las variaciones de la celda después de la tara y ruido eléctrico del HX711 limitan la resolución de la báscula a unas décimas de gramo.
+- El peso de un recién nacido está aproximadamente entre 500 g y 4500 g. Si el error absoluto se mantiene en el orden de 0,2 a 0,5 g, para un bebé de 2000 g representaría apenas un 0,01 % a 0,03 %, lo cual sería despreciable en la práctica clínica.
+
+# **Discusión**
+
+# **Referencias**
